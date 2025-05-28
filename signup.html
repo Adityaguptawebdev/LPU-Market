@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - LPU Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="../index.html" style="text-decoration: none; color: inherit;">LPU Market</a></h2>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="category.html?cat=electronics">Electronics</a>
+                        <a href="category.html?cat=books">Books</a>
+                        <a href="category.html?cat=hostel">Hostel Essentials</a>
+                        <a href="category.html?cat=clothing">Clothing</a>
+                        <a href="category.html?cat=misc">Miscellaneous</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-auth" id="navAuth">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Form -->
+    <main class="main-content">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Join LPU Market</h1>
+                <p>Create your account to start buying and selling</p>
+            </div>
+            
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="form-control" 
+                        placeholder="Enter your full name"
+                        required
+                        minlength="2"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-control" 
+                        placeholder="Enter your LPU email"
+                        required
+                    >
+                    <small class="form-text">Use your LPU email address for verification</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-control" 
+                        placeholder="Create a strong password"
+                        required
+                        minlength="6"
+                    >
+                    <small class="form-text">Password must be at least 6 characters long</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword" 
+                        class="form-control" 
+                        placeholder="Confirm your password"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#" onclick="showTerms()">Terms of Service</a> and <a href="#" onclick="showPrivacy()">Privacy Policy</a>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                        <span class="checkmark"></span>
+                        Send me updates about new features and products
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    Create Account
+                </button>
+            </form>
+            
+            <div class="form-footer">
+                <p>Already have an account? <a href="login.html">Sign in here</a></p>
+            </div>
+            
+            <div class="signup-benefits">
+                <h4>Why join LPU Market?</h4>
+                <ul>
+                    <li>✅ Buy and sell with verified LPU students</li>
+                    <li>✅ Safe and secure transactions</li>
+                    <li>✅ Find great deals on campus</li>
+                    <li>✅ Easy to use platform</li>
+                    <li>✅ Connect with your peers</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LPU Market</h3>
+                    <p>Your campus marketplace for buying and selling used items among LPU students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="post-product.html">Post Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="category.html?cat=electronics">Electronics</a></li>
+                        <li><a href="category.html?cat=books">Books</a></li>
+                        <li><a href="category.html?cat=hostel">Hostel Essentials</a></li>
+                        <li><a href="category.html?cat=clothing">Clothing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LPU Market. Made with ❤️ for LPU students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+    
+    <script>
+        function showTerms() {
+            Utils.Notification.info('Terms of Service would be displayed here.');
+        }
+        
+        function showPrivacy() {
+            Utils.Notification.info('Privacy Policy would be displayed here.');
+        }
+        
+        // Add password strength indicator
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            
+            if (passwordInput) {
+                passwordInput.addEventListener('input', function() {
+                    const password = this.value;
+                    const strength = calculatePasswordStrength(password);
+                    showPasswordStrength(strength);
+                });
+            }
+            
+            if (confirmPasswordInput) {
+                confirmPasswordInput.addEventListener('input', function() {
+                    const password = passwordInput.value;
+                    const confirmPassword = this.value;
+                    
+                    if (confirmPassword && password !== confirmPassword) {
+                        this.setCustomValidity('Passwords do not match');
+                    } else {
+                        this.setCustomValidity('');
+                    }
+                });
+            }
+        });
+        
+        function calculatePasswordStrength(password) {
+            let strength = 0;
+            
+            if (password.length >= 6) strength++;
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            
+            return strength;
+        }
+        
+        function showPasswordStrength(strength) {
+            const strengthTexts = [
+                'Very Weak',
+                'Weak',
+                'Fair',
+                'Good',
+                'Strong',
+                'Very Strong'
+            ];
+            
+            const strengthColors = [
+                '#dc3545',
+                '#fd7e14',
+                '#ffc107',
+                '#20c997',
+                '#28a745',
+                '#007bff'
+            ];
+            
+            let strengthIndicator = document.querySelector('.password-strength');
+            if (!strengthIndicator) {
+                strengthIndicator = document.createElement('div');
+                strengthIndicator.className = 'password-strength';
+                document.getElementById('password').parentNode.appendChild(strengthIndicator);
+            }
+            
+            strengthIndicator.innerHTML = `
+                <small style="color: ${strengthColors[strength]}">
+                    Password Strength: ${strengthTexts[strength]}
+                </small>
+            `;
+        }
+    </script>
+</body>
+</html>

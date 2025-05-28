@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - LPU Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="../index.html" style="text-decoration: none; color: inherit;">LPU Market</a></h2>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="category.html?cat=electronics">Electronics</a>
+                        <a href="category.html?cat=books">Books</a>
+                        <a href="category.html?cat=hostel">Hostel Essentials</a>
+                        <a href="category.html?cat=clothing">Clothing</a>
+                        <a href="category.html?cat=misc">Miscellaneous</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-auth" id="navAuth">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <div class="category-header-content">
+                <h1 id="categoryTitle">All Products</h1>
+                <p>Find great deals from your fellow LPU students</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters and Search -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-filter">
+                    <form id="searchForm" class="search-form">
+                        <input 
+                            type="text" 
+                            name="query" 
+                            id="searchInput" 
+                            placeholder="Search products..." 
+                            class="search-input"
+                        >
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+                
+                <div class="category-filter">
+                    <select id="categoryFilter" class="form-control">
+                        <option value="">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="books">Books</option>
+                        <option value="hostel">Hostel Essentials</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="misc">Miscellaneous</option>
+                    </select>
+                </div>
+                
+                <div class="sort-filter">
+                    <select id="sortFilter" class="form-control">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="title">Title A-Z</option>
+                    </select>
+                </div>
+                
+                <div class="view-toggle">
+                    <button id="gridView" class="view-btn active" title="Grid View">⊞</button>
+                    <button id="listView" class="view-btn" title="List View">☰</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-header">
+                <div class="products-count">
+                    <span id="productsCount">Loading products...</span>
+                </div>
+                <div class="post-product-cta">
+                    <a href="post-product.html" class="btn btn-primary">Post Your Product</a>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="categoryProducts">
+                <!-- Products will be loaded here -->
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="load-more-container" id="loadMoreContainer" style="display: none;">
+                <button id="loadMoreBtn" class="btn btn-outline">Load More Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Categories -->
+    <section class="quick-categories">
+        <div class="container">
+            <h3>Browse Other Categories</h3>
+            <div class="quick-categories-grid">
+                <a href="category.html?cat=electronics" class="quick-category">
+                    <span class="category-icon">📱</span>
+                    <span>Electronics</span>
+                </a>
+                <a href="category.html?cat=books" class="quick-category">
+                    <span class="category-icon">📚</span>
+                    <span>Books</span>
+                </a>
+                <a href="category.html?cat=hostel" class="quick-category">
+                    <span class="category-icon">🏠</span>
+                    <span>Hostel Essentials</span>
+                </a>
+                <a href="category.html?cat=clothing" class="quick-category">
+                    <span class="category-icon">👕</span>
+                    <span>Clothing</span>
+                </a>
+                <a href="category.html?cat=misc" class="quick-category">
+                    <span class="category-icon">🎯</span>
+                    <span>Miscellaneous</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LPU Market</h3>
+                    <p>Your campus marketplace for buying and selling used items among LPU students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="post-product.html">Post Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="category.html?cat=electronics">Electronics</a></li>
+                        <li><a href="category.html?cat=books">Books</a></li>
+                        <li><a href="category.html?cat=hostel">Hostel Essentials</a></li>
+                        <li><a href="category.html?cat=clothing">Clothing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LPU Market. Made with ❤️ for LPU students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+    
+    <script>
+        let currentProducts = [];
+        let displayedProducts = 0;
+        const productsPerPage = 12;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCategoryPage();
+            setupCategoryFilters();
+            setupViewToggle();
+            setupSorting();
+        });
+        
+        function initializeCategoryPage() {
+            const category = Utils.URL.getParam('cat');
+            const searchQuery = Utils.URL.getParam('search');
+            
+            // Update category filter
+            const categoryFilter = document.getElementById('categoryFilter');
+            if (categoryFilter && category) {
+                categoryFilter.value = category;
+            }
+            
+            // Update search input
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput && searchQuery) {
+                searchInput.value = searchQuery;
+            }
+            
+            loadProducts();
+        }
+        
+        function loadProducts() {
+            const category = Utils.URL.getParam('cat');
+            const searchQuery = Utils.URL.getParam('search');
+            
+            if (searchQuery) {
+                currentProducts = Products.searchProducts(searchQuery, category);
+            } else if (category) {
+                currentProducts = Products.getProductsByCategory(category);
+            } else {
+                currentProducts = Products.getAllProducts();
+            }
+            
+            displayedProducts = 0;
+            displayProducts();
+            updateProductsCount();
+        }
+        
+        function displayProducts() {
+            const container = document.getElementById('categoryProducts');
+            const loadMoreContainer = document.getElementById('loadMoreContainer');
+            
+            if (displayedProducts === 0) {
+                container.innerHTML = '';
+            }
+            
+            const productsToShow = currentProducts.slice(displayedProducts, displayedProducts + productsPerPage);
+            
+            if (productsToShow.length === 0 && displayedProducts === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No products found</h3>
+                        <p>Try adjusting your search or browse other categories.</p>
+                        <a href="post-product.html" class="btn btn-primary">Post the First Product</a>
+                    </div>
+                `;
+                loadMoreContainer.style.display = 'none';
+                return;
+            }
+            
+            productsToShow.forEach(product => {
+                const card = ProductUI.renderProductCard(product);
+                container.appendChild(card);
+            });
+            
+            displayedProducts += productsToShow.length;
+            
+            // Show/hide load more button
+            if (displayedProducts < currentProducts.length) {
+                loadMoreContainer.style.display = 'block';
+            } else {
+                loadMoreContainer.style.display = 'none';
+            }
+        }
+        
+        function updateProductsCount() {
+            const countElement = document.getElementById('productsCount');
+            if (countElement) {
+                const total = currentProducts.length;
+                const showing = Math.min(displayedProducts, total);
+                countElement.textContent = `Showing ${showing} of ${total} products`;
+            }
+        }
+        
+        function setupCategoryFilters() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            if (categoryFilter) {
+                categoryFilter.addEventListener('change', function() {
+                    const category = this.value;
+                    const currentUrl = new URL(window.location);
+                    
+                    if (category) {
+                        currentUrl.searchParams.set('cat', category);
+                    } else {
+                        currentUrl.searchParams.delete('cat');
+                    }
+                    
+                    window.location.href = currentUrl.toString();
+                });
+            }
+            
+            // Load more button
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', displayProducts);
+            }
+        }
+        
+        function setupViewToggle() {
+            const gridViewBtn = document.getElementById('gridView');
+            const listViewBtn = document.getElementById('listView');
+            const productsGrid = document.getElementById('categoryProducts');
+            
+            if (gridViewBtn && listViewBtn && productsGrid) {
+                gridViewBtn.addEventListener('click', function() {
+                    productsGrid.className = 'products-grid';
+                    gridViewBtn.classList.add('active');
+                    listViewBtn.classList.remove('active');
+                });
+                
+                listViewBtn.addEventListener('click', function() {
+                    productsGrid.className = 'products-list';
+                    listViewBtn.classList.add('active');
+                    gridViewBtn.classList.remove('active');
+                });
+            }
+        }
+        
+        function setupSorting() {
+            const sortFilter = document.getElementById('sortFilter');
+            if (sortFilter) {
+                sortFilter.addEventListener('change', function() {
+                    const sortBy = this.value;
+                    sortProducts(sortBy);
+                    displayedProducts = 0;
+                    displayProducts();
+                });
+            }
+        }
+        
+        function sortProducts(sortBy) {
+            switch (sortBy) {
+                case 'newest':
+                    currentProducts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                    break;
+                case 'oldest':
+                    currentProducts.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+                    break;
+                case 'price-low':
+                    currentProducts.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    currentProducts.sort((a, b) => b.price - a.price);
+                    break;
+                case 'title':
+                    currentProducts.sort((a, b) => a.title.localeCompare(b.title));
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

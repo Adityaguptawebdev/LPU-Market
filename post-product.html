@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Product - LPU Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="../index.html" style="text-decoration: none; color: inherit;">LPU Market</a></h2>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="category.html?cat=electronics">Electronics</a>
+                        <a href="category.html?cat=books">Books</a>
+                        <a href="category.html?cat=hostel">Hostel Essentials</a>
+                        <a href="category.html?cat=clothing">Clothing</a>
+                        <a href="category.html?cat=misc">Miscellaneous</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-auth" id="navAuth">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Product Form -->
+    <main class="main-content">
+        <div class="form-container" style="max-width: 600px;">
+            <div class="form-header">
+                <h1>Post Your Product</h1>
+                <p>Sell your items to fellow LPU students</p>
+            </div>
+            
+            <form id="productForm" class="product-form">
+                <div class="form-group">
+                    <label for="productTitle">Product Title *</label>
+                    <input 
+                        type="text" 
+                        id="productTitle" 
+                        name="title" 
+                        class="form-control" 
+                        placeholder="e.g., iPhone 12 Pro - Excellent Condition"
+                        required
+                        maxlength="100"
+                    >
+                    <small class="form-text">Be specific and descriptive (max 100 characters)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productCategory">Category *</label>
+                    <select id="productCategory" name="category" class="form-control" required>
+                        <option value="">Select a category</option>
+                        <option value="electronics">📱 Electronics</option>
+                        <option value="books">📚 Books</option>
+                        <option value="hostel">🏠 Hostel Essentials</option>
+                        <option value="clothing">👕 Clothing</option>
+                        <option value="misc">🎯 Miscellaneous</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productPrice">Price (₹) *</label>
+                    <input 
+                        type="number" 
+                        id="productPrice" 
+                        name="price" 
+                        class="form-control" 
+                        placeholder="Enter price in rupees"
+                        required
+                        min="1"
+                        max="1000000"
+                        step="1"
+                    >
+                    <small class="form-text">Set a fair price for your item</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productDescription">Description *</label>
+                    <textarea 
+                        id="productDescription" 
+                        name="description" 
+                        class="form-control" 
+                        rows="5"
+                        placeholder="Describe your product in detail. Include condition, age, reason for selling, etc."
+                        required
+                        minlength="10"
+                        maxlength="1000"
+                    ></textarea>
+                    <small class="form-text">
+                        <span id="descriptionCount">0</span>/1000 characters. 
+                        Include details about condition, usage, and why you're selling.
+                    </small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productImage">Product Image</label>
+                    <input 
+                        type="file" 
+                        id="productImage" 
+                        name="image" 
+                        class="form-control" 
+                        accept="image/*"
+                    >
+                    <small class="form-text">Upload a clear photo of your product (optional, max 5MB)</small>
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <span class="checkmark"></span>
+                        I confirm that this product belongs to me and I have the right to sell it
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="contact" id="contact">
+                        <span class="checkmark"></span>
+                        Allow other students to contact me about this product
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    📤 Post Product
+                </button>
+            </form>
+            
+            <div class="posting-tips">
+                <h4>💡 Tips for Better Sales</h4>
+                <ul>
+                    <li>✅ Use clear, well-lit photos</li>
+                    <li>✅ Write detailed, honest descriptions</li>
+                    <li>✅ Set competitive prices</li>
+                    <li>✅ Respond quickly to inquiries</li>
+                    <li>✅ Be honest about product condition</li>
+                    <li>✅ Meet in safe, public places on campus</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LPU Market</h3>
+                    <p>Your campus marketplace for buying and selling used items among LPU students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="post-product.html">Post Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="category.html?cat=electronics">Electronics</a></li>
+                        <li><a href="category.html?cat=books">Books</a></li>
+                        <li><a href="category.html?cat=hostel">Hostel Essentials</a></li>
+                        <li><a href="category.html?cat=clothing">Clothing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LPU Market. Made with ❤️ for LPU students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in
+            if (!Auth.isLoggedIn()) {
+                Utils.Notification.error('Please login to post a product');
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 1000);
+                return;
+            }
+            
+            setupFormValidation();
+            setupImagePreview();
+            setupCharacterCount();
+        });
+        
+        function setupFormValidation() {
+            const form = document.getElementById('productForm');
+            const titleInput = document.getElementById('productTitle');
+            const priceInput = document.getElementById('productPrice');
+            const descriptionInput = document.getElementById('productDescription');
+            
+            // Real-time validation
+            titleInput.addEventListener('blur', function() {
+                validateTitle(this.value);
+            });
+            
+            priceInput.addEventListener('blur', function() {
+                validatePrice(this.value);
+            });
+            
+            descriptionInput.addEventListener('blur', function() {
+                validateDescription(this.value);
+            });
+            
+            // Form submission
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                if (validateForm()) {
+                    submitProduct();
+                }
+            });
+        }
+        
+        function validateTitle(title) {
+            const isValid = Utils.Validator.required(title) && 
+                           Utils.Validator.minLength(title, 3) && 
+                           Utils.Validator.maxLength(title, 100);
+            
+            const titleInput = document.getElementById('productTitle');
+            toggleFieldError(titleInput, !isValid, 'Title must be between 3-100 characters');
+            return isValid;
+        }
+        
+        function validatePrice(price) {
+            const isValid = Utils.Validator.positiveNumber(price) && 
+                           parseFloat(price) <= 1000000;
+            
+            const priceInput = document.getElementById('productPrice');
+            toggleFieldError(priceInput, !isValid, 'Please enter a valid price (₹1 - ₹10,00,000)');
+            return isValid;
+        }
+        
+        function validateDescription(description) {
+            const isValid = Utils.Validator.required(description) && 
+                           Utils.Validator.minLength(description, 10) && 
+                           Utils.Validator.maxLength(description, 1000);
+            
+            const descriptionInput = document.getElementById('productDescription');
+            toggleFieldError(descriptionInput, !isValid, 'Description must be between 10-1000 characters');
+            return isValid;
+        }
+        
+        function validateForm() {
+            const formData = new FormData(document.getElementById('productForm'));
+            
+            const title = formData.get('title');
+            const price = formData.get('price');
+            const description = formData.get('description');
+            const category = formData.get('category');
+            const terms = formData.get('terms');
+            
+            let isValid = true;
+            
+            if (!validateTitle(title)) isValid = false;
+            if (!validatePrice(price)) isValid = false;
+            if (!validateDescription(description)) isValid = false;
+            
+            if (!category) {
+                Utils.Notification.error('Please select a category');
+                isValid = false;
+            }
+            
+            if (!terms) {
+                Utils.Notification.error('Please confirm that you own this product');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        function submitProduct() {
+            const form = document.getElementById('productForm');
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Posting...';
+            
+            // Get image data if uploaded
+            const imageFile = formData.get('image');
+            let imageData = null;
+            
+            if (imageFile && imageFile.size > 0) {
+                const validation = Utils.ImageHelper.validateFile(imageFile);
+                if (!validation.valid) {
+                    Utils.Notification.error(validation.error);
+                    resetSubmitButton(submitBtn);
+                    return;
+                }
+                
+                // In a real app, you would upload to a server
+                // For demo, we'll use a placeholder
+                imageData = 'data:image/placeholder';
+            }
+            
+            const productData = {
+                title: formData.get('title'),
+                description: formData.get('description'),
+                price: formData.get('price'),
+                category: formData.get('category'),
+                image: imageData
+            };
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                const result = Products.addProduct(productData);
+                
+                if (result.success) {
+                    Utils.Notification.success(result.message);
+                    form.reset();
+                    document.getElementById('imagePreview').innerHTML = '';
+                    document.getElementById('descriptionCount').textContent = '0';
+                    
+                    setTimeout(() => {
+                        window.location.href = 'profile.html';
+                    }, 1500);
+                } else {
+                    Utils.Notification.error(result.message);
+                }
+                
+                resetSubmitButton(submitBtn);
+            }, 1000);
+        }
+        
+        function resetSubmitButton(btn) {
+            btn.disabled = false;
+            btn.textContent = '📤 Post Product';
+        }
+        
+        function setupImagePreview() {
+            const imageInput = document.getElementById('productImage');
+            const preview = document.getElementById('imagePreview');
+            
+            imageInput.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                
+                if (file) {
+                    const validation = Utils.ImageHelper.validateFile(file);
+                    if (!validation.valid) {
+                        Utils.Notification.error(validation.error);
+                        this.value = '';
+                        preview.innerHTML = '';
+                        return;
+                    }
+                    
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        preview.innerHTML = `
+                            <div class="preview-container">
+                                <img src="${e.target.result}" alt="Preview" style="max-width: 200px; max-height: 200px; border-radius: 8px;">
+                                <button type="button" class="remove-image" onclick="removeImage()">✕</button>
+                            </div>
+                        `;
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.innerHTML = '';
+                }
+            });
+        }
+        
+        function removeImage() {
+            document.getElementById('productImage').value = '';
+            document.getElementById('imagePreview').innerHTML = '';
+        }
+        
+        function setupCharacterCount() {
+            const descriptionInput = document.getElementById('productDescription');
+            const countElement = document.getElementById('descriptionCount');
+            
+            descriptionInput.addEventListener('input', function() {
+                const count = this.value.length;
+                countElement.textContent = count;
+                
+                if (count > 1000) {
+                    countElement.style.color = '#dc3545';
+                } else if (count > 800) {
+                    countElement.style.color = '#ffc107';
+                } else {
+                    countElement.style.color = '#666';
+                }
+            });
+        }
+        
+        function toggleFieldError(field, hasError, message) {
+            const errorElement = field.parentNode.querySelector('.error-message');
+            
+            if (hasError) {
+                Utils.DOM.addClass(field, 'error');
+                if (!errorElement) {
+                    const error = Utils.DOM.create('div', 'error-message', message);
+                    field.parentNode.appendChild(error);
+                }
+            } else {
+                Utils.DOM.removeClass(field, 'error');
+                if (errorElement) {
+                    errorElement.remove();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

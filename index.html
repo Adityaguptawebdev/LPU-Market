@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPU Market - Buy & Sell on Campus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>LPU Market</h2>
+            </div>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="pages/category.html?cat=electronics">Electronics</a>
+                        <a href="pages/category.html?cat=books">Books</a>
+                        <a href="pages/category.html?cat=hostel">Hostel Essentials</a>
+                        <a href="pages/category.html?cat=clothing">Clothing</a>
+                        <a href="pages/category.html?cat=misc">Miscellaneous</a>
+                    </div>
+                </div>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-auth" id="navAuth">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Buy & Sell on Campus</h1>
+            <p>Connect with fellow LPU students to buy and sell used items. From textbooks to electronics, find everything you need at student-friendly prices.</p>
+            <div class="hero-buttons">
+                <a href="pages/post-product.html" class="btn btn-primary btn-large">Post Your Product</a>
+                <a href="pages/category.html" class="btn btn-outline btn-large">Browse Products</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="hero_img2.png" alt="LPU Market Hero" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="location.href='pages/category.html?cat=electronics'">
+                    <div class="category-icon">📱</div>
+                    <h3>Electronics</h3>
+                    <p>Phones, Laptops, Gadgets</p>
+                </div>
+                <div class="category-card" onclick="location.href='pages/category.html?cat=books'">
+                    <div class="category-icon">📚</div>
+                    <h3>Books</h3>
+                    <p>Textbooks, Novels, Study Materials</p>
+                </div>
+                <div class="category-card" onclick="location.href='pages/category.html?cat=hostel'">
+                    <div class="category-icon">🏠</div>
+                    <h3>Hostel Essentials</h3>
+                    <p>Furniture, Appliances, Decor</p>
+                </div>
+                <div class="category-card" onclick="location.href='pages/category.html?cat=clothing'">
+                    <div class="category-icon">👕</div>
+                    <h3>Clothing</h3>
+                    <p>Casual Wear, Formal, Accessories</p>
+                </div>
+                <div class="category-card" onclick="location.href='pages/category.html?cat=misc'">
+                    <div class="category-icon">🎯</div>
+                    <h3>Miscellaneous</h3>
+                    <p>Sports, Hobbies, Others</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Latest Products</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded dynamically -->
+            </div>
+            <div class="text-center">
+                <a href="pages/category.html" class="btn btn-outline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LPU Market</h3>
+                    <p>Your campus marketplace for buying and selling used items among LPU students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="pages/post-product.html">Post Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="pages/category.html?cat=electronics">Electronics</a></li>
+                        <li><a href="pages/category.html?cat=books">Books</a></li>
+                        <li><a href="pages/category.html?cat=hostel">Hostel Essentials</a></li>
+                        <li><a href="pages/category.html?cat=clothing">Clothing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Developer</h4>
+                    <p><strong>Aditya Gupta</strong></p>
+                    <p>Designed & Developed with passion</p>
+                    <a href="https://incomparable-salmiakki-9e333a.netlify.app/" target="_blank" class="portfolio-link">
+                        <span class="portfolio-icon">🌐</span>
+                        View Portfolio
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LPU Market. Made with ❤️ for LPU students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
