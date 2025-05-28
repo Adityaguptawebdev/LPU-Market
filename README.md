@@ -1,6 +1,24 @@
 # LPU Market - Campus Marketplace
 
+# Live Project 🚀
+
+[👉 Click here to see the live demo](https://leafy-frangipane-bb9878.netlify.app/)
+
+
+
 A modern, responsive marketplace website designed specifically for LPU (Lovely Professional University) students to buy and sell used items within the campus community.
+
+
+## Screenshots
+
+### Screenshot 1: Homepage
+
+![Website Screenshot]
+![Screenshot 2025-05-28 134534](https://github.com/user-attachments/assets/acca98cc-1951-44c2-94ba-69394dda35d8)
+![Screenshot 2025-05-28 134609](https://github.com/user-attachments/assets/5ac1b8ba-3efc-4f7f-b75e-827e2eba38b5)
+![Screenshot 2025-05-28 134554](https://github.com/user-attachments/assets/814b0734-be8d-4d65-890a-aa492f1a7dad)
+
+
 
 ## 🌟 Features
 
