@@ -1,8 +1,7 @@
 # LPU Market - Campus Marketplace
 
-# Live Project 🚀
-
-[👉 Click here to see the live demo]([https://leafy-frangipane-bb9878.netlify.app/](https://thriving-empanada-d37df9.netlify.app/))
+## 🌐 Live Demo
+👉 [Click here to see the live project](https://thriving-empanada-d37df9.netlify.app/)
 
 
 
